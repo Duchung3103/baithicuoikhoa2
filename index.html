@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle</title>
+    <script>
+        function numberOneTriangle(prime) {
+        if (prime >= 1 && prime <= 10) {
+          let output = "";
+          for (let i = 1; i <= prime; i++) {
+            let row = "";
+            for (let j = 1; j <= i; j++) {
+              row += "* ";
+            }
+            output += row + "<br>";
+          }
+          document.getElementById("output").innerHTML = output;
+        } else {
+          document.getElementById("output").innerHTML = "The parameter must be an integer between 1 and 10.";
+        }
+      }
+        </script>
+</head>
+<body>
+    <h1>NumberOneTriangle</h1>
+  <p>Nhap so tu 1 toi 10:</p>
+  <input type="text" id="prime">
+  <button onclick="numberOneTriangle(parseInt(document.getElementById('prime').value))">In hinh tam giac</button>
+  <div id="output"></div>
+</body>
+</html>
